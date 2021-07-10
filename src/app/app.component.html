@@ -1,2 +1,13 @@
 <h1>My Posts</h1>
-<app-post *ngFor="let post of posts" [content]="post.body" [title]="post.title"></app-post>
+<app-post *ngFor="let post of posts | slice: (page-1)*pageSize : (page-1)*pageSize+pageSize" [content]="post.body" [title]="post.title"></app-post>
+
+<ngb-pagination [collectionSize]="posts.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+
+<!-- <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Custom pagination">
+    <ng-template ngbPaginationPrevious>Prev</ng-template>
+    <ng-template ngbPaginationNext>Next</ng-template>
+    <ng-template ngbPaginationNumber let-p>{{ getPageSymbol(p) }}</ng-template>
+</ngb-pagination>
+<hr> -->
+
+<pre>Current page: {{page}}</pre>
