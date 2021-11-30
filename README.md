@@ -1,6 +1,8 @@
 # AngularPwa
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+## Description
+Angular pwa is used to add offline capabilities which makes certain components or pages to be stored in your browser which will make those components and pages available back when the internet is cut off and you want to visit that site or web page from the same browser which you last browsed the web from
 
 ## Development server
 
